@@ -15,14 +15,13 @@
         <a-entity camera></a-entity>
         </a-scene> -->
         <a-scene>
-            <a-assets>
-              <img id="underwater-texture" src="https://fishbb.github.io/ar/3d/diamond/underwater3.jpg" crossorigin="anonymous">
-              <a-assets-item id="diamond-obj" src="https://raw.githubusercontent.com/cpalmer-ostmodern/AR/main/scene.gltf" />
-            </a-assets>
-                    <a-entity gltf-model="https://raw.githubusercontent.com/cpalmer-ostmodern/AR/main/scene.gltf" scale="2" position='0 0 0' rotation="0 0 360" ></a-entity> 
-            
-            
+                    <a-assets>
+                        <a-asset-item id="tree" src="https://raw.githubusercontent.com/cpalmer-ostmodern/AR/main/scene.gltf"></a-asset-item>
+                      </a-assets>
+                      <!-- use your gltf model -->
+                      <a-entity gltf-model="##tree"></a-entity>
           </a-scene>
 
-    </body>z
+    </body>
+
 </html>

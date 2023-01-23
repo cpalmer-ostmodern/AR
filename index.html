@@ -1,23 +1,61 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
-  <!-- we import arjs version without NFT but with marker + location based support -->
   <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded fog arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+    <a-scene embedded fog arjs artoolkit='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
       
       <a-marker type='barcode' value='7'>
           <a-text value="Hello, from HIA!"></a-text>
           <a-image src="./hia-cover.png"></a-image>
           <a-image src="./hia-logo.png"></a-image>
+          <a-box></a-box>
       </a-marker>
 
 
       <a-entity camera></a-entity>
     </a-scene>
   </body>
-</html>
+</html> -->
 
+<!doctype HTML>
+<html>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="js/aframe-particle-system-component.js"></script>
+<body style="margin: 0px; overflow: hidden;">
+
+<a-scene embedded fog vr-mode-ui="enabled: false;" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"">
+
+    <!-- 
+    for more info, see: https://aframe.io/docs/1.0.0/components/animation.html 
+    for more examples:  https://stemkoski.github.io/A-Frame-Examples/animation.html
+    -->
+    
+    <a-marker type="barcode" value="7">
+        <a-entity 
+            position="0 0 0" 
+            particle-system="
+                texture: hia-logo.png;
+                color: #FF0000, #FFFF00; 
+                size: 1, 0;
+                velocityValue: 0.001 0.001 0.001;
+                velocitySpread: 0.5 0 0.5; 
+                accelerationValue: 0.001 0.001 0.001;
+                accelerationSpread: 0.001 0.001 0.001;
+                rotationAngle: 0; 
+                blending: 1;
+                particleCount: 200;
+                maxAge: 5; ">
+        </a-entity>
+    </a-marker>
+    
+    <a-entity camera></a-entity>
+    
+</a-scene>
+</body>
+</html>

@@ -8,13 +8,8 @@
   <!-- we import arjs version without NFT but with marker + location based support -->
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded fog arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-      <a-assets>
-        <img id="texture" src="hia-logo.png">
-      </a-assets>
-    
       
       <a-marker type='barcode' value='7'>
-          <a-box src="#texture"></a-box>
           <a-text value="Hello, from HIA!"></a-text>
           <a-image src="./hia-cover.png"></a-image>
           <a-image src="./hia-logo.png"></a-image>

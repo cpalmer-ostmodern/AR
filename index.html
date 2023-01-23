@@ -1,61 +1,76 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
+    <!-- <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> -->
+    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
 <html>
-  <head>
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded fog arjs artoolkit='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-      
-      <a-marker type='barcode' value='7'>
-          <a-text value="Hello, from HIA!"></a-text>
-          <a-image src="./hia-cover.png"></a-image>
-          <a-image src="./hia-logo.png"></a-image>
-          <a-box></a-box>
+    <head>
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    </head>
+    <body>
+        <a-scene embedded fog arjs artoolkit='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+          <a-marker type='barcode' value='7'>
+            <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9">
+                <a-animation
+                    attribute="color"
+                    from="#4CC3D9"
+                    to="#000000"
+                    dur="2000"
+                    direction="alternate"
+                    repeat="1"
+                    fill="forwards"
+                    begin="click"
+                >
+                </a-animation>
+                
+            </a-box>
+            <a-torus color="#43A367" arc="360" radius="1" radius-tubular="0.1" position="0 2 -4">
+                <a-animation
+                    attribute="rotation"
+                    from="0 0 0"
+                    to="360 360 0"
+                    dur="2000"
+                    direction="alternate"
+                    repeat="1"
+                    fill="forwards"
+                    begin="click"
+                >
+                </a-animation>
+                
+            </a-torus>
+            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D">
+                <a-animation
+                    attribute="position"
+                    from="1 0.75 -3"
+                    to="2 0.75 -6"
+                    dur="2000"
+                    direction="alternate"
+                    repeat="1"
+                    fill="forwards"
+                    begin="click"
+                >
+                </a-animation>
+            </a-cylinder>
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4">
+                <a-animation
+                    attribute="scale"
+                    from="1 1 1"
+                    to="3 3 3"
+                    dur="2000"
+                    direction="alternate"
+                    repeat="1"
+                    fill="forwards"
+                    begin="click"
+                >
+                </a-animation>
+            </a-plane>
+                      
       </a-marker>
-
-
-      <a-entity camera></a-entity>
+            
+            <a-sky color="#ECECEC"></a-sky>
+            
+            <a-camera>
+                <a-cursor fuse="true" fuse-timeout="1000"></a-cursor>
+            </a-camera>
     </a-scene>
   </body>
-</html> -->
-
-<!doctype HTML>
-<html>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-<script src="js/aframe-particle-system-component.js"></script>
-<body style="margin: 0px; overflow: hidden;">
-
-<a-scene embedded fog vr-mode-ui="enabled: false;" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"">
-
-    <!-- 
-    for more info, see: https://aframe.io/docs/1.0.0/components/animation.html 
-    for more examples:  https://stemkoski.github.io/A-Frame-Examples/animation.html
-    -->
-    
-    <a-marker type="barcode" value="7">
-        <a-entity 
-            position="0 0 0" 
-            particle-system="
-                texture: hia-logo.png;
-                color: #FF0000, #FFFF00; 
-                size: 1, 0;
-                velocityValue: 0.001 0.001 0.001;
-                velocitySpread: 0.5 0 0.5; 
-                accelerationValue: 0.001 0.001 0.001;
-                accelerationSpread: 0.001 0.001 0.001;
-                rotationAngle: 0; 
-                blending: 1;
-                particleCount: 200;
-                maxAge: 5; ">
-        </a-entity>
-    </a-marker>
-    
-    <a-entity camera></a-entity>
-    
-</a-scene>
-</body>
 </html>

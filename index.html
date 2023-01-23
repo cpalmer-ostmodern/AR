@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <head>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
   <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
@@ -12,7 +15,7 @@
 
         <a-marker type='barcode' value='7'>
           <a-text value="Hello, from HIA!"></a-text>
-          <a-image src="https://raw.githubusercontent.com/cpalmer-ostmodern/AR/main/scene.glt"></a-image>
+          <a-image src="https://crossorigin.me/https://raw.githubusercontent.com/cpalmer-ostmodern/AR/main/scene.glt"></a-image>
         <a-entity
           position="0 0 0"
           scale="0.05 0.05 0.05"

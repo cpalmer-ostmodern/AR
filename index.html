@@ -16,7 +16,8 @@
       arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
     >
       <a-marker type="barcode" value="7">
-        <a-box rotation="45 90 180" position="0 0.5 0" color="white">
+        <!-- <a-box rotation="45 90 180" position="0 0.5 0" color="white"> -->
+        <a-box position="0 0.5 0" color="white">
           <a-animation
             attribute="rotation"
             dur="7000"
@@ -25,12 +26,12 @@
             repeat="indefinite"
           ></a-animation>
         </a-box>
+        <a-text
+          text="value: HIA Magazine"
+          color="black"
+          rotation="-90 0 0"
+        ></a-text>
     </a-marker>
-    <a-text
-      text="value: HIA Magazine"
-      color="black"
-      rotation="-90 0 0"
-    ></a-text>
 
       <a-entity camera></a-entity>
     </a-scene>

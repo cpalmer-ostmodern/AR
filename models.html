@@ -11,14 +11,15 @@
         <a-asset-item id="scene" src="models/scene.gltf"></a-asset-item>
 	</a-assets>
     
-    <a-entity light="type: hemisphere; color: #33C; groundColor: #3C3; intensity: 2"></a-entity>
     
     <a-marker type="barcode" value="7">
-        <a-entity   position="0 0 0" 
-                    rotation="-90 0 0"
-                    scale="3 3 3"
-                    gltf-model="#scene" >
-        </a-entity>
+        <a-entity   light="type: hemisphere; color: #33C; groundColor: #3C3; intensity: 2"
+        position="0 0 0" 
+        rotation="-90 0 0"
+        scale="3 3 3"
+        gltf-model="#scene" >
+    </a-entity>
+    <a-entity light="type: hemisphere; color: #FFF; groundColor: #33F; intensity: 2"></a-entity>
     </a-marker>
     
 

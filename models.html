@@ -5,13 +5,13 @@
 <script src="js/aframe-ar.js"></script>
 <body style="margin: 0px; overflow: hidden;">
 
-<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
     <a-assets>
         <a-asset-item id="tree" src="models/tree.gltf"></a-asset-item>
 	</a-assets>
     
-    <a-marker type="pattern" url="data/kanji.patt">
+    <a-marker type="barcode" value="7">
         <a-entity   position="0 0 0" 
                     rotation="0 0 0"
                     scale="0.10 0.10 0.10"

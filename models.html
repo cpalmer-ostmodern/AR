@@ -18,6 +18,10 @@
                     gltf-model="#scene" >
         </a-entity>
     </a-marker>
+
+    <a-light type="directional" position="0 0 0" rotation="-90 0 0" target="#directionaltarget">
+        <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
+      </a-light>
     
     <a-entity camera></a-entity>
     

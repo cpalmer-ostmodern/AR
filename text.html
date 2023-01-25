@@ -9,7 +9,7 @@
 
 <body style="margin: 0px; overflow: hidden;">
 
-<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"></a-scene>
 
 	<a-assets>
 		<a-asset-item id="exoFont" src="fonts/exoBlack.typeface.json"></a-asset-item>
@@ -17,7 +17,7 @@
 	</a-assets>
 
 	<!-- 2D text -->
-	<a-marker type="pattern" url="data/kanji.patt">
+	<a-marker type="barcode" value="7">
 		
 		<!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
 		<a-plane color="white" rotation="-90 0 0" position="0 -0.25 0" width="3" material="transparent: true; opacity: 0.90"></a-plane>
@@ -34,7 +34,7 @@
 	</a-marker>
 
 	<!-- 3D text -->
-	<a-marker type="pattern" url="data/hiro.patt">
+	<a-marker type="barcode" value="7">
 
 		<!-- 
 			using aframe-text-geometry component

@@ -1,2 +1,2 @@
-# cpalmer-ostmodern.io
-AR.js Marker based QR Code
+# AR.js-examples
+Examples using the AR.js library

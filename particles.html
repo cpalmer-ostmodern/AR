@@ -12,7 +12,9 @@
     for more info, see: https://aframe.io/docs/1.0.0/components/animation.html 
     for more examples:  https://stemkoski.github.io/A-Frame-Examples/animation.html
     -->
-    
+    <a-assets>
+        <img id="hia-image" src="images/hia-girl-edit.png">
+      </a-assets>
     <a-marker type="barcode" value="7">
         <a-entity 
             position="0 0 0" 
@@ -30,6 +32,10 @@
                 maxAge: 5; ">
         </a-entity>
     </a-marker>
+    <a-image position="0 0.5 0"  src="#hia-image"></a-image>
+
+    <a-text position="0 1 0" value="ترفيه وفنون" font="fonts/Exo2Bold.fnt" color="white" rotation="-90 0 0" scale="2 2 2"></a-text>
+
     
     <a-entity camera></a-entity>
     
